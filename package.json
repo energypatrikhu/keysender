@@ -1,6 +1,6 @@
 {
   "name": "@energypatrikhu/keysender",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Node.js keyboard and mouse inputs emulator, global hotkey register for Windows",
   "keywords": [
     "automation",
