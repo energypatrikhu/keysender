@@ -29,7 +29,7 @@ npm install @energypatrikhu/keysender
 ## Example
 
 ```ts
-import { Hardware, GlobalHotkey } from "keysender";
+import { Hardware, GlobalHotkey } from "@energypatrikhu/keysender";
 
 const notepad = new Hardware(null, "Notepad"); // find Notepad handle by className and set it as workwindow
 
@@ -156,7 +156,7 @@ Classes Hardware and Virtual provide the same [keyboard](#keyboard), [mouse](#mo
   > Note: Virtual keyboard and mouse methods do not work for all windows, for example, input line in certain window may accept message from [printText](#printext) method, but [sendKey](#sendkey) method makes no effect outside input line, or the window may accept a keystroke message from [sendKey](#sendkey) method but not accept mouse movement message from [moveTo](#moveto) method.
 
 ```ts
-import { Hardware, Virtual } from "keysender";
+import { Hardware, Virtual } from "@energypatrikhu/keysender";
 
 const foo = new Hardware("Some title");
 
@@ -196,7 +196,7 @@ Pressing and releasing key or combination of keys
 | delayAfterRelease | milliseconds to await after **key** released | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -230,7 +230,7 @@ Toggling key or combination of keys to provided state
 | delay    | milliseconds to await after **key** toggling                   | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -266,7 +266,7 @@ Pressing and releasing array of keys or combinations of keys
 | delay             | milliseconds to await after last key released                  | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -302,7 +302,7 @@ Prints given text
 | delay                | milliseconds to await after text printed                      | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -338,7 +338,7 @@ click(
 | delayAfterRelease | milliseconds to await after **button** released | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -364,7 +364,7 @@ Switch mouse button state
 | delay    | milliseconds to await after switching **button** **state**    | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -388,7 +388,7 @@ Move mouse to [x, y] in current workwindow
 | delay    | milliseconds to await after mouse movement | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -412,7 +412,7 @@ Move mouse from current position by [x, y] relatively
 | delay    | milliseconds to await after mouse movement | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -446,7 +446,7 @@ Simulate human similar mouse movement from current cursor position to [x, y] in 
 | delay     | milliseconds to await after movement end | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -467,7 +467,7 @@ scrollWheel(amount: number, delay?: number | [from: number, to: number]): Promis
 | delay    | milliseconds to await after wheel scroll                                                                                                                                                 | `0`           |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -485,7 +485,7 @@ getPos(): Position;
 Returns current cursor position relative to workwindow
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -531,7 +531,7 @@ set(parentTitle: string | null, parentClassName: string | null, childClassName: 
 Same as [constructor](#hardware-and-virtual).
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware("Some title"); // or Virtual
 
@@ -551,7 +551,7 @@ get(): {
 ```
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware("Some title"); // or Virtual
 
@@ -570,7 +570,7 @@ Tries to find a new workwindow using already defined `handle`, `className`, `chi
 returns `true` if new workwindow successfully find (new handle not equal to 0), `false` if it is not
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware("Some title"); // or Virtual
 
@@ -595,7 +595,7 @@ Sets workwindow position and/or size
 | height       | window height     |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -617,7 +617,7 @@ getView(): Position & Size;
 Returns object with workwindow position and size
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -635,7 +635,7 @@ setForeground(): void;
 Makes the current workwindow the foreground window
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -653,7 +653,7 @@ isForeground(): boolean;
 Checks if the current workwindow is a foreground window
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -671,7 +671,7 @@ isOpen(): boolean;
 Checks if the current workwindow exist
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -689,7 +689,7 @@ kill(): void;
 Terminates current workwindow by killing it's thread
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -707,7 +707,7 @@ close(): void;
 Closes current workwindow by sending close message to it
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -746,7 +746,7 @@ Returns object `{ data, width, height }`
 | height | height of captured img |
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -782,7 +782,7 @@ colorAt(x: number, y: number, returnType: "number"): number;
 Returns pixel color in [x, y] of current workwindow (or screen if `handle` was unset)
 
 ```ts
-import { Hardware } from "keysender";
+import { Hardware } from "@energypatrikhu/keysender";
 
 const obj = new Hardware(handle); // or Virtual
 
@@ -886,7 +886,7 @@ Registers a hotkey, if any hotkey is already registered for this **key**, [unreg
 | defaultState?                                       | default [state](#state)                                                                                                                                                                                                                                                                                                                                                                    |               |
 
 ```ts
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 new GlobalHotkey({
   // logs "hi" after pressing "num+"
@@ -977,7 +977,7 @@ Stops the loop of [action](#globalhotkey.options.action) executing
 | reason   | reason to [after](#globalhotkey.options.after) method | `Reason.BY_STOP` |
 
 ```ts
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 const hotkey = new GlobalHotkey<never, "someReason">({
   key: "num-",
@@ -1016,7 +1016,7 @@ reassignment(newHotkey: KeyboardRegularButton | number): void;
 Reassignments hotkey
 
 ```js
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 const foo = new GlobalHotkey({
   key: "num+",
@@ -1040,7 +1040,7 @@ unregister(): void;
 Unregisters a hotkey, but it can still be reassignment using the [reassignment](#reassignment) method
 
 ```ts
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 const foo = new GlobalHotkey({
   key: "num+",
@@ -1064,7 +1064,7 @@ delete(): void;
 Delete a hotkey, it can't be [reassignment](#reassignment)
 
 ```ts
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 const foo = new GlobalHotkey({
   key: "num+",
@@ -1129,7 +1129,7 @@ static unregisterAll(): void;
 Unregister all hotkeys, but they still can be reassignment by [reassignment](#reassignment) method
 
 ```js
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 GlobalHotkey.unregisterAll();
 ```
@@ -1145,7 +1145,7 @@ static deleteAll(): void;
 Delete all hotkeys
 
 ```ts
-import { GlobalHotkey } from "keysender";
+import { GlobalHotkey } from "@energypatrikhu/keysender";
 
 GlobalHotkey.deleteAll();
 ```
@@ -1221,7 +1221,7 @@ class LowLevelHook<S = never, R = never> {
 Similar to [GlobalHotkey](#globalhotkey), but also allows you to add callback for mouse, does not block the key itself, can't be provoked by synthetic clicks, can add multiple callbacks for the same button
 
 ```ts
-import { LowLevelHook } from "keysender";
+import { LowLevelHook } from "@energypatrikhu/keysender";
 
 new LowLevelHook({
   device: "keyboard",
@@ -1260,7 +1260,7 @@ static on<D extends "keyboard" | "mouse">(
 Adds **listener** for given **device**, **button** and **state**
 
 ```ts
-import { LowLevelHook } from "keysender";
+import { LowLevelHook } from "@energypatrikhu/keysender";
 
 LowLevelHook.on("mouse", "left", true, () => {
   console.log("left mouse button was pressed");
@@ -1310,7 +1310,7 @@ Disables or enables the device buttons provided in **options**, if some device w
 Enabling returns array with information about blocked inputs since the last time [disableInput](#disableinput) execution (skips mouse move records because it is called too often)
 
 ```ts
-import { disableInput } from "keysender";
+import { disableInput } from "@energypatrikhu/keysender";
 
 disableInput(true); // disables all inputs from mouse and keyboard
 
@@ -1335,7 +1335,7 @@ function isButtonPressed<D extends "keyboard" | "mouse">(
 Returns array with objects {handle, title, className} of all open windows
 
 ```ts
-import { isButtonPressed } from "keysender";
+import { isButtonPressed } from "@energypatrikhu/keysender";
 
 console.log(isButtonPressed("mouse", "x1"));
 
@@ -1383,7 +1383,7 @@ Returns:
 | height | height of drawn text |
 
 ```ts
-import { textToImg } from "keysender";
+import { textToImg } from "@energypatrikhu/keysender";
 
 const img1 = textToImg("Hello World!", "./path/to/font.ttf", 12);
 
@@ -1414,7 +1414,7 @@ function getAllWindows(): Array<{
 Returns array with objects {handle, title, className} of all open windows
 
 ```ts
-import { getAllWindows } from "keysender";
+import { getAllWindows } from "@energypatrikhu/keysender";
 
 console.log(getAllWindows());
 ```
@@ -1442,7 +1442,7 @@ function getWindowChildren(
 Returns array with objects {handle, title, className} with all children of given window
 
 ```ts
-import { getWindowChildren } from "keysender";
+import { getWindowChildren } from "@energypatrikhu/keysender";
 
 console.log(getWindowChildren(parentHandle));
 
@@ -1464,7 +1464,7 @@ function getScreenSize(): size;
 Returns object with screen size
 
 ```js
-import { getScreenSize } from "keysender";
+import { getScreenSize } from "@energypatrikhu/keysender";
 
 console.log(getScreenSize());
 ```
@@ -1480,7 +1480,7 @@ function vkToString(virtualKey: number): KeyboardButton;
 Returns string name of **virtualKey**
 
 ```ts
-import { vkToString } from "keysender";
+import { vkToString } from "@energypatrikhu/keysender";
 
 console.log(vkToString(66)); // "b"
 ```
@@ -1496,7 +1496,7 @@ function sleep(ms: number | [from: number, to: number]): Promise<void>;
 This method used under the hood of all async methods
 
 ```ts
-import { sleep } from "keysender";
+import { sleep } from "@energypatrikhu/keysender";
 
 await sleep(25);
 
