@@ -21,13 +21,7 @@ npm install -g node-gyp
 Install keysender using npm:
 
 ```
-npm install keysender
-```
-
-or yarn:
-
-```
-yarn add keysender
+npm install @energypatrikhu/keysender
 ```
 
 ---
