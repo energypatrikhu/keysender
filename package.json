@@ -22,7 +22,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "install": "node-gyp rebuild",
-    "build": "yarn tsc",
+    "build": "tsc",
     "release": "release-it"
   },
   "types": "./dist/index.d.ts",
