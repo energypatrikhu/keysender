@@ -69,7 +69,7 @@
       "commit": false,
       "requireCommits": true,
       "tagAnnotation": "${version}",
-      "requireBranch": "latest"
+      "requireBranch": "master"
     }
   }
 }
